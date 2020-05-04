@@ -1,18 +1,18 @@
 <template>
 <div>
-    <div style="background: linear-gradient(#0A2342,#1C2541) ">
+    <div style="background: linear-gradient(#0A2342,#1C2541); margin-bottom:0; ">
         <v-row dir="rtl" align="center">
-            <v-col cols="6" xs="12">
-                <img src="../assets/edit.png" style="margin:0 auto; display:block;" width="250" title="Mohamed`s Picture" alt="Mohamed`s Picture">
+            <v-col sm="6" cols="12">
+                <img src="../assets/edit.png" class="profileImg" title="Mohamed`s Picture" alt="Mohamed`s Picture">
             </v-col>
-            <v-col cols="6" xs="12">
+            <v-col sm="6" cols="12">
                 <h1 class="mainName text-center white--text">
                     Mohamed Mostafa
                 </h1>
-                <h2 class="text-center white--text">
+                <h2 class="text-center jobTitle white--text">
                     Front-end (Vue js) developer <br>
                     Senior-1 CE Student at Nile Univeristy <br>
-                    <div class="topMargin">
+                    <div dir="ltr" class="topMargin">
                         <v-btn v-for="item in media" :key="item.link" link color="white" icon target="_blank" :title="item.title" :href="item.link">
                             <v-icon>{{item.icon}}</v-icon>
                         </v-btn>
@@ -20,6 +20,7 @@
                 </h2>
             </v-col>
         </v-row>
+
     </div>
     <svg viewBox="0 0 1440 320">
         <svg viewBox="0 0 1440 320">
@@ -69,9 +70,55 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped>
 .mainName {
     margin-top: 50px;
+}
+
+.jobTitle {
+    font-size: 1rem;
+}
+
+.profileImg {
+    margin: 0 auto;
+    display: block;
+    width: 250px;
+}
+
+.desktopView {
+    display: show;
+}
+
+.mobileView {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .desktopView {
+        display: none;
+    }
+
+    .mobileView {
+        display: block;
+    }
+
+    .profileImg {
+        height: 250px;
+        width: auto;
+        border-radius: 50%;
+    }
+
+    .topMargin {
+        margin-top: 0;
+    }
+
+    .mainName {
+        margin-top: 0;
+    }
+
+    .imgCol {
+        width: 100% !important;
+    }
 }
 
 .topMargin {
