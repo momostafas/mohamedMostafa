@@ -1,6 +1,9 @@
 <template>
 <v-container>
     <h3 class="text-center">Work Expirence</h3>
+    <!-- <v-card data-aos="fade-right">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, illo provident sapiente tempore eius, fugiat ullam repellat quo unde sequi vel excepturi voluptatum molestiae libero. Itaque nobis modi corrupti repellat?
+    </v-card> -->
     <v-timeline>
         <v-timeline-item v-for="item in items" :key="item.title" large>
             <template v-slot:icon>
@@ -11,7 +14,7 @@
             <template v-slot:opposite>
                 <span class="bold">{{item.period}}</span>
             </template>
-            <v-card class="elevation-2"  :color="item.cardColor">
+            <v-card class="elevation-2" :data-aos="item.animation" :color="item.cardColor">
                 <v-card-title :class="item.textColor + ' bold'">{{item.title}}</v-card-title>
                 <v-card-text :class="item.textColor">
                     <ul>
@@ -23,9 +26,6 @@
             </v-card>
         </v-timeline-item>
     </v-timeline>
-    <div data-aos="fade-right">
-        Element To Animate
-    </div>
 </v-container>
 </template>
 
@@ -42,7 +42,8 @@ export default {
                     ],
                     cardColor: '#c89c6e',
                     textColor: 'white--text',
-                    period: 'May 2019 - present'
+                    period: 'May 2019 - present',
+                    animation: 'fade-right'
                 },
                 {
                     title: 'Full Stack developer at ICareer',
@@ -50,7 +51,8 @@ export default {
                     desc: ['Freelancer Full stack developer for fixing and adding some features in old project.'],
                     cardColor: '#2f3f50',
                     textColor: 'white--text',
-                    period: 'Oct 2019'
+                    period: 'Oct 2019',
+                    animation: 'fade-left'
                 },
                 {
                     title: 'Front end developer at SubsBase',
@@ -58,7 +60,8 @@ export default {
                     desc: ['Freelancer Front end (Vue Js) developer for building main featuers of SubsBase Main App.'],
                     cardColor: '#204092',
                     textColor: 'white--text',
-                    period: 'Sep 2019'
+                    period: 'Sep 2019',
+                    animation: 'fade-right'
                 },
                 {
                     title: 'Front end developer at 04 Egypt',
@@ -66,7 +69,8 @@ export default {
                     desc: ['Front end (Vue Js) developer Worked on a chat bot app using Rockt Chat', 'Data Visualizer using D3.js'],
                     cardColor: '#4294ff',
                     textColor: 'white--text',
-                    period: 'Sep 2018 - May 2019'
+                    period: 'Sep 2018 - May 2019',
+                    animation: 'zoom-right'
                 },
                 {
                     title: 'Front end developer intern at Tafra Io',
@@ -74,7 +78,8 @@ export default {
                     desc: ['Front end (Angular 4) developer intern.'],
                     cardColor: '#504883',
                     textColor: 'white--text',
-                    period: 'May 2018 - Aug 2018'
+                    period: 'May 2018 - Aug 2018',
+                    animation: 'flip-right'
                 },
                 {
                     title: 'Web Developer at Ghareeb Trading',
@@ -82,25 +87,27 @@ export default {
                     desc: ['Freelancer web developer for building their static website.'],
                     cardColor: '#42a061',
                     textColor: 'white--text',
-                    period: 'Dec 2017 – Jan 2018'
+                    period: 'Dec 2017 – Jan 2018',
+                    animation: 'zoom-left'
                 },
             ]
         }
     },
 }
 </script>
+
 <style lang="scss">
-  .animate {
-  transition-delay: .1s;
-  transition-duration : .25s;
-  transition-timing-function: ease-in;
+.animate {
+    transition-delay: .1s;
+    transition-duration: .25s;
+    transition-timing-function: ease-in;
 }
- 
+
 .slide-up {
-  transform: translateY(0)
+    transform: translateY(0)
 }
- 
+
 .slide-up.animate-active {
-  transform: translateY(-100px)
+    transform: translateY(-100px)
 }
 </style>
