@@ -3,13 +3,13 @@
     <div style="background: linear-gradient(#0A2342,#1C2541); margin-bottom:0; ">
         <v-row dir="rtl" align="center">
             <v-col sm="6" cols="12">
-                <img src="../assets/edit.png" class="profileImg" title="Mohamed`s Picture" alt="Mohamed`s Picture">
+                <img src="../assets/edit.png" class="profileImg wow zoomIn" title="Mohamed`s Picture" alt="Mohamed`s Picture">
             </v-col>
             <v-col sm="6" cols="12">
-                <h1 class="mainName text-center white--text">
+                <h1 class="mainName text-center white--text wow slideInLeft">
                     Mohamed Mostafa
                 </h1>
-                <h2 class="text-center jobTitle white--text">
+                <h2 class="text-center jobTitle white--text wow slideInLeft">
                     Front-end (Vue js) developer <br>
                     Senior-1 CE Student at Nile Univeristy <br>
                     <div dir="ltr" class="topMargin">
