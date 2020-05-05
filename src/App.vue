@@ -8,6 +8,8 @@
             <mainSection />
             <workExp />
             <skills />
+            <personalInfo />
+            <appFooter />
         </div>
     </v-content>
 </v-app>
@@ -18,14 +20,17 @@ import loadingPage from './components/loadingPage';
 import mainSection from './components/mainSec';
 import workExp from './components/workExp';
 import skills from './components/skills'
-
+import personalInfo from './components/personalInfo'
+import appFooter from './components/footer'
 export default {
     name: 'App',
     components: {
         loadingPage,
         mainSection,
         workExp,
-        skills
+        skills,
+        personalInfo,
+        appFooter
     },
     data: () => ({
         loading: true,

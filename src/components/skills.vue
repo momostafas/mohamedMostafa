@@ -1,17 +1,15 @@
 <template>
-<v-card>
-    <v-container>
-        <h3 class="text-center title mt-8">Skills</h3>
-        <div class="text-center">
-            <v-card v-for="skill in skills" :key="skill.title" class="skillCard">
-                <v-card-title class="indigo--text">{{skill.title}}</v-card-title>
-                <v-chip v-for="tech in skill.technologies" :key="tech.name" class="ma-2" :color="tech.color" text-color="white">
-                    {{tech.name}}
-                </v-chip>
-            </v-card>
-        </div>
-    </v-container>
-</v-card>
+<v-container>
+    <h3 class="text-center title mt-8" data-aos="fade-up">Skills</h3>
+    <div class="text-center">
+        <v-card v-for="skill in skills" :data-aos="skill.animation" :key="skill.title" class="skillCard mb-2">
+            <v-card-title class="indigo--text">{{skill.title}}</v-card-title>
+            <v-chip v-for="tech in skill.technologies" :key="tech.name" class="ma-2" :color="tech.color" text-color="white">
+                {{tech.name}}
+            </v-chip>
+        </v-card>
+    </div>
+</v-container>
 </template>
 
 <script>
@@ -20,6 +18,7 @@ export default {
         return {
             skills: [{
                     title: 'Front-end Development',
+                    animation: 'zoom-in-up',
                     technologies: [{
                             name: 'Vue js',
                             color: '#41b883'
@@ -60,6 +59,7 @@ export default {
                 },
                 {
                     title: 'Back-end Development',
+                    animation: 'zoom-in-down',
                     technologies: [{
                             name: 'Node js',
                             color: '#333'
@@ -80,6 +80,7 @@ export default {
                 },
                 {
                     title: 'MATLAB',
+                    animation: 'zoom-in-right',
                     technologies: [{
                             name: 'Image Processing',
                             color: '#35749d'
@@ -92,6 +93,7 @@ export default {
                 },
                 {
                     title: 'Others',
+                    animation: 'zoom-in-right',
                     technologies: [{
                             name: 'Python',
                             color: '#366d9e'
