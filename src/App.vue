@@ -9,6 +9,7 @@
             <workExp />
             <skills />
             <personalInfo />
+            <instagram />
             <appFooter />
         </div>
     </v-content>
@@ -21,6 +22,7 @@ import mainSection from './components/mainSec';
 import workExp from './components/workExp';
 import skills from './components/skills'
 import personalInfo from './components/personalInfo'
+import instagram from './components/instagram'
 import appFooter from './components/footer'
 export default {
     name: 'App',
@@ -30,6 +32,7 @@ export default {
         workExp,
         skills,
         personalInfo,
+        instagram,
         appFooter
     },
     data: () => ({

@@ -16,6 +16,7 @@
 export default {
     data() {
         return {
+            msg: 'hello',
             skills: [{
                     title: 'Front-end Development',
                     animation: 'zoom-in-up',
