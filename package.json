@@ -17,7 +17,7 @@
     "vue-animate-scroll": "^0.1.5",
     "vue-mq": "^1.0.1",
     "vue-parallaxy": "^1.1.1",
-    "vuetify": "^2.2.11"
+    "vuetify": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.0",
